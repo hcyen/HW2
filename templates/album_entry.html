@@ -1,0 +1,31 @@
+{% block content %}
+      <h2 style = "text-align: center;">Album Entry Form</h2>
+		
+      
+      
+      <form action = "http://localhost:5000/album_result" method = "POST">
+         
+            {{ form.hidden_tag() }} 
+            
+            <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+               {{ form.albumname.label }}<br> 
+               {{ form.albumname() }} 
+               <br>
+               
+              
+			  
+				<tr>
+					<td>{{ form.howmuchlike.label }}</td>
+					<td>{{ form.howmuchlike }}</td>
+				</tr>
+				
+			    
+
+              
+                {{ form.submit() }} 
+            </div>
+            
+         
+      </form>
+      
+ {% endblock %}
